@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="温州市嘉伦织带有限公司专注鞋用松紧带与弹力织带，为鞋类产品提供多规格、配色与来样开发服务。">
+  <meta name="theme-color" content="#07131f">
+  <title>温州市嘉伦织带有限公司｜鞋用松紧带与弹力织带</title>
+  <link rel="preload" href="/assets/jialun-elastic-hero.jpg" as="image">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307131f'/%3E%3Cpath d='M18 17h9v22c0 5-3 8-8 8h-3v-8h2V17Zm14 0h9v9h7v8h-7v13h-9V17Z' fill='%23ff632e'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --navy: #07131f; --navy-2: #0d2132; --orange: #ff632e; --orange-dark: #d94416;
+      --ice: #eaf0f2; --mist: #f5f7f7; --white: #fff; --ink: #10202d; --muted: #64727d;
+      --line: rgba(7, 19, 31, .15); --page: min(1220px, calc(100% - 48px));
+      --sans: Inter, "SF Pro Display", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--mist); font: 16px/1.7 var(--sans); -webkit-font-smoothing: antialiased; }
+    body.menu-open { overflow: hidden; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    img { display: block; width: 100%; }
+    ::selection { color: var(--white); background: var(--orange); }
+    :focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
+    .container { width: var(--page); margin-inline: auto; }
+    .section { padding: 116px 0; }
+    .eyebrow { display: flex; align-items: center; gap: 12px; margin: 0 0 17px; color: var(--orange-dark); font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 28px; height: 3px; background: currentColor; }
+    .display { margin: 0; font-size: clamp(2.5rem, 5vw, 5.35rem); font-weight: 750; line-height: 1.08; letter-spacing: -.055em; }
+    .section-lead { max-width: 640px; margin: 22px 0 0; color: var(--muted); font-size: 1.05rem; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 70px; margin-bottom: 58px; }
+    .section-head .section-lead { margin: 0 0 8px; max-width: 470px; }
+
+    .site-header { position: fixed; inset: 0 0 auto; z-index: 50; color: var(--white); border-bottom: 1px solid rgba(255,255,255,.12); background: rgba(7,19,31,.78); backdrop-filter: blur(18px); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .brand { display: inline-flex; align-items: center; gap: 13px; }
+    .brand-mark { width: 36px; height: 36px; position: relative; display: inline-block; border: 1px solid rgba(255,255,255,.28); }
+    .brand-mark::before, .brand-mark::after { content: ""; position: absolute; width: 8px; height: 24px; top: 5px; background: var(--orange); transform: skew(-12deg); }
+    .brand-mark::before { left: 9px; } .brand-mark::after { left: 19px; }
+    .brand-text { display: grid; line-height: 1.1; }
+    .brand-text strong { font-size: .9rem; letter-spacing: .08em; }
+    .brand-text small { margin-top: 5px; color: rgba(255,255,255,.55); font-size: .6rem; letter-spacing: .12em; }
+    .nav-links { display: flex; align-items: center; gap: 32px; font-size: .88rem; font-weight: 600; }
+    .nav-links > a:not(.nav-cta) { color: rgba(255,255,255,.72); transition: color .2s ease; }
+    .nav-links > a:hover { color: var(--white); }
+    .nav-cta { padding: 10px 18px; color: var(--white); background: var(--orange); }
+    .lang-switch { display: flex; align-items: center; padding: 3px; border: 1px solid rgba(255,255,255,.28); }
+    .lang-switch button { min-width: 42px; min-height: 32px; padding: 0 8px; color: rgba(255,255,255,.58); border: 0; background: transparent; cursor: pointer; font-size: .78rem; font-weight: 750; }
+    .lang-switch button.active { color: var(--navy); background: var(--white); }
+    .menu-button { display: none; place-items: center; padding: 8px; color: var(--white); border: 0; background: transparent; }
+
+    .hero { min-height: 100svh; position: relative; display: grid; align-items: end; overflow: hidden; color: var(--white); background: var(--navy); }
+    .hero-bg { position: absolute; inset: 0; }
+    .hero-bg img { height: 100%; object-fit: cover; object-position: center; }
+    .hero-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,19,31,.98) 0%, rgba(7,19,31,.92) 34%, rgba(7,19,31,.4) 68%, rgba(7,19,31,.1) 100%); }
+    .hero-content { position: relative; z-index: 1; padding: 160px 0 58px; }
+    .hero-kicker { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 26px; font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .hero-kicker::before { content: ""; width: 10px; height: 10px; background: var(--orange); }
+    .hero h1 { max-width: 720px; margin: 0; font-size: clamp(3.5rem, 7.8vw, 7.8rem); font-weight: 780; line-height: .98; letter-spacing: -.07em; }
+    .hero h1 span { display: block; color: var(--orange); }
+    .hero-copy { max-width: 590px; margin: 32px 0 0; color: rgba(255,255,255,.74); font-size: 1.08rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 36px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 23px; font-size: .9rem; font-weight: 750; transition: transform .2s ease, background .2s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { color: var(--white); background: var(--orange); }
+    .button-primary:hover { background: #ff7546; }
+    .button-ghost { color: var(--white); border: 1px solid rgba(255,255,255,.35); }
+    .hero-bottom { display: grid; grid-template-columns: repeat(4,1fr); margin-top: 85px; border-top: 1px solid rgba(255,255,255,.16); border-left: 1px solid rgba(255,255,255,.16); }
+    .hero-feature { min-height: 88px; display: flex; align-items: center; gap: 12px; padding: 18px; border-right: 1px solid rgba(255,255,255,.16); border-bottom: 1px solid rgba(255,255,255,.16); font-size: .9rem; }
+    .hero-feature::before { content: ""; flex: 0 0 6px; width: 6px; height: 24px; background: var(--orange); }
+
+    .intro { background: var(--white); }
+    .intro-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 92px; align-items: center; }
+    .intro-visual { position: relative; min-height: 580px; background: var(--ice); overflow: hidden; }
+    .intro-visual img { height: 100%; min-height: 580px; object-fit: cover; }
+    .intro-label { position: absolute; left: 0; bottom: 0; max-width: 285px; padding: 24px 28px; color: var(--white); background: var(--orange); font-weight: 700; }
+    .intro-copy > p:not(.eyebrow) { margin: 30px 0; color: var(--muted); }
+    .value-list { display: grid; grid-template-columns: 1fr 1fr; margin-top: 34px; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .value { min-height: 130px; padding: 24px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .value strong { display: block; margin-bottom: 7px; font-size: 1rem; }
+    .value span { color: var(--muted); font-size: .88rem; }
+
+    .products { background: var(--ice); }
+    .product-grid { display: grid; grid-template-columns: repeat(12,1fr); gap: 20px; }
+    .product { min-height: 330px; position: relative; overflow: hidden; padding: 30px; background: var(--white); border: 1px solid rgba(7,19,31,.08); }
+    .product:nth-child(1), .product:nth-child(4) { grid-column: span 7; }
+    .product:nth-child(2), .product:nth-child(3) { grid-column: span 5; }
+    .product::before { content: ""; position: absolute; right: -15%; bottom: -22%; width: 64%; aspect-ratio: 1; border-radius: 50%; opacity: .7; background: repeating-radial-gradient(circle at center, transparent 0 8px, rgba(7,19,31,.12) 9px 11px); transition: transform .4s ease; }
+    .product:nth-child(2)::before { background: repeating-linear-gradient(120deg, transparent 0 14px, rgba(255,99,46,.14) 15px 19px); transform: rotate(10deg); }
+    .product:nth-child(3)::before { background: repeating-linear-gradient(90deg, transparent 0 10px, rgba(7,19,31,.12) 11px 14px); }
+    .product:nth-child(4)::before { background: repeating-radial-gradient(ellipse, transparent 0 12px, rgba(255,99,46,.16) 13px 16px); }
+    .product:hover::before { transform: scale(1.08) rotate(4deg); }
+    .product-no { display: block; color: var(--orange-dark); font-size: .75rem; font-weight: 800; letter-spacing: .14em; }
+    .product-content { position: absolute; z-index: 1; inset: auto 30px 28px; max-width: 450px; }
+    .product h3 { margin: 0 0 10px; font-size: clamp(1.5rem,3vw,2.35rem); line-height: 1.2; letter-spacing: -.03em; }
+    .product p { margin: 0; color: var(--muted); font-size: .94rem; }
+
+    .custom { color: var(--white); background: var(--navy); }
+    .custom .eyebrow { color: var(--orange); }
+    .custom .section-lead { color: rgba(255,255,255,.6); }
+    .custom-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 100px; }
+    .custom-head { position: sticky; top: 115px; align-self: start; }
+    .custom-steps { counter-reset: steps; border-top: 1px solid rgba(255,255,255,.16); }
+    .custom-step { counter-increment: steps; display: grid; grid-template-columns: 72px 1fr; gap: 24px; padding: 30px 0; border-bottom: 1px solid rgba(255,255,255,.16); }
+    .custom-step::before { content: "0" counter(steps); color: var(--orange); font-weight: 800; }
+    .custom-step h3 { margin: 0 0 8px; font-size: 1.25rem; }
+    .custom-step p { margin: 0; color: rgba(255,255,255,.58); }
+
+    .quality { background: var(--white); }
+    .quality-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 100px; align-items: center; }
+    .quality-list { display: grid; grid-template-columns: 1fr 1fr; margin-top: 42px; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .quality-item { padding: 24px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .quality-item strong { display: block; font-size: 1rem; }
+    .quality-item span { display: block; margin-top: 6px; color: var(--muted); font-size: .86rem; }
+    .quality-visual { padding: 48px; color: var(--white); background: var(--navy-2); }
+    .sample-band { height: 54px; margin: 16px 0; overflow: hidden; background: repeating-linear-gradient(90deg,#121a21 0 3px,#39444d 4px 7px); transform: skewY(-2deg); }
+    .sample-band.orange { background: repeating-linear-gradient(90deg,#db481a 0 3px,#ff7b50 4px 7px); }
+    .sample-band.light { background: repeating-linear-gradient(90deg,#d8d1c7 0 3px,#f3eee6 4px 7px); }
+    .quality-note { margin: 34px 0 0; color: rgba(255,255,255,.6); font-size: .9rem; }
+
+    .cta { color: var(--white); background: var(--orange); }
+    .cta-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 80px; align-items: end; }
+    .cta .eyebrow { color: var(--white); }
+    .cta .display { max-width: 800px; }
+    .cta-copy { padding-bottom: 8px; }
+    .cta-copy p { margin: 0 0 28px; color: rgba(255,255,255,.82); }
+    .cta .button { color: var(--navy); background: var(--white); }
+
+    .contact { padding: 80px 0 34px; color: var(--white); background: #040c13; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; }
+    .contact-brand .brand { margin-bottom: 22px; }
+    .contact-brand p { max-width: 460px; margin: 0; color: rgba(255,255,255,.48); }
+    .contact-info { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    .contact-block strong { display: block; margin-bottom: 8px; color: var(--orange); font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; }
+    .contact-block span { color: rgba(255,255,255,.72); }
+    .phone-list { display: flex; flex-wrap: wrap; gap: 6px 16px; }
+    .phone-list a { color: rgba(255,255,255,.82); padding-bottom: 2px; border-bottom: 1px solid rgba(255,255,255,.28); }
+    .phone-list a:hover { color: var(--white); border-color: var(--orange); }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 24px; margin-top: 72px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.1); color: rgba(255,255,255,.36); font-size: .78rem; }
+    [data-reveal] { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
+    [data-reveal].visible { opacity: 1; transform: none; }
+
+    @media (max-width: 920px) {
+      :root { --page: min(100% - 32px,720px); }
+      .section { padding: 88px 0; }
+      .menu-button { display: grid; }
+      .nav-links { position: fixed; inset: 76px 0 auto; min-height: calc(100svh - 76px); display: none; flex-direction: column; align-items: stretch; gap: 28px; padding: 36px 24px; background: var(--navy); font-size: 1.2rem; }
+      .menu-open .nav-links { display: flex; }
+      .nav-cta { text-align: center; }
+      .lang-switch { align-self: flex-start; margin-top: 8px; }
+      .hero-bg::after { background: linear-gradient(90deg,rgba(7,19,31,.96),rgba(7,19,31,.62)); }
+      .hero-bottom { grid-template-columns: 1fr 1fr; }
+      .intro-grid, .custom-grid, .quality-grid, .cta-grid, .contact-grid { grid-template-columns: 1fr; gap: 54px; }
+      .intro-visual, .intro-visual img { min-height: 440px; }
+      .custom-head { position: relative; top: auto; }
+      .product:nth-child(n) { grid-column: span 6; }
+    }
+    @media (max-width: 600px) {
+      .section-head { display: block; }
+      .section-head .section-lead { margin-top: 20px; }
+      .brand-text small { display: none; }
+      .hero h1 { font-size: clamp(3.4rem,17vw,5.2rem); }
+      .hero-bottom { margin-top: 58px; }
+      .hero-feature { min-height: 76px; padding: 14px; }
+      .value-list, .quality-list { grid-template-columns: 1fr; }
+      .product:nth-child(n) { grid-column: span 12; min-height: 300px; }
+      .custom-step { grid-template-columns: 48px 1fr; }
+      .contact-info { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+      [data-reveal] { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="主导航">
+      <a class="brand" href="#top" aria-label="温州市嘉伦织带有限公司首页"><span class="brand-mark" aria-hidden="true"></span><span class="brand-text"><strong>嘉伦织带</strong><small>鞋用弹力织带</small></span></a>
+      <button class="menu-button" type="button" aria-label="打开导航" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 8h16M4 16h16" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <div class="nav-links"><a href="#about">关于嘉伦</a><a href="#products">产品系列</a><a href="#custom">定制流程</a><a href="#quality">品质关注</a><a class="nav-cta" href="#contact">获取样品</a><div class="lang-switch" aria-label="语言选择"><button type="button" data-lang="zh" class="active" aria-pressed="true">中文</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div></div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"><img src="/assets/jialun-elastic-hero.jpg" alt="" width="2000" height="800"></div>
+      <div class="hero-content container">
+        <p class="hero-kicker">Elastic Webbing for Footwear</p>
+        <h1>让每一步，<span>弹性更精准。</span></h1>
+        <p class="hero-copy">温州市嘉伦织带有限公司，专注鞋用松紧带与弹力织带，为不同鞋型、结构与设计需求提供多规格、配色和来样开发支持。</p>
+        <div class="hero-actions"><a class="button button-primary" href="#products">查看产品系列</a><a class="button button-ghost" href="#contact">咨询打样</a></div>
+        <div class="hero-bottom" aria-label="业务特点"><div class="hero-feature">鞋用松紧带</div><div class="hero-feature">多规格与配色</div><div class="hero-feature">来样开发</div><div class="hero-feature">批量供应</div></div>
+      </div>
+    </section>
+
+    <section class="section intro" id="about">
+      <div class="container intro-grid">
+        <figure class="intro-visual" data-reveal><img src="/assets/jialun-shoe-application.jpg" alt="黑色鞋面上使用的弹力织带细节" width="1600" height="1067" loading="lazy"><figcaption class="intro-label">为鞋面结构提供恰到好处的弹性与支撑</figcaption></figure>
+        <div class="intro-copy" data-reveal>
+          <p class="eyebrow">关于嘉伦</p><h2 class="display">懂织带，也懂它在鞋上的每一次受力。</h2>
+          <p>从穿着舒适度、包裹感到鞋型稳定，松紧带虽是鞋上的小部件，却直接影响成品体验。嘉伦围绕鞋材应用，关注织纹、弹性、回弹、手感和外观一致性，让材料更好地配合鞋款设计。</p>
+          <div class="value-list"><div class="value"><strong>应用导向</strong><span>围绕鞋口、鞋面、侧帮等结构需求匹配材料。</span></div><div class="value"><strong>灵活开发</strong><span>可按宽度、颜色、织纹及样品方向沟通开发。</span></div><div class="value"><strong>细节一致</strong><span>关注批次之间的色泽、尺寸和弹性表现。</span></div><div class="value"><strong>沟通直接</strong><span>从打样到量产，减少信息偏差与反复确认。</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section products" id="products">
+      <div class="container">
+        <div class="section-head" data-reveal><div><p class="eyebrow">产品系列</p><h2 class="display">为不同鞋型，匹配不同弹性。</h2></div><p class="section-lead">以下为鞋用弹力织带的常见开发方向。具体材质、宽度、颜色与弹性参数可根据样品和使用场景沟通。</p></div>
+        <div class="product-grid">
+          <article class="product" data-reveal><span class="product-no">PRODUCT 01</span><div class="product-content"><h3>鞋口松紧带</h3><p>适用于鞋口包裹与穿脱结构，兼顾贴合、回弹与长时间穿着感。</p></div></article>
+          <article class="product" data-reveal><span class="product-no">PRODUCT 02</span><div class="product-content"><h3>鞋面弹力带</h3><p>用于鞋面、侧帮等受力位置，为设计提供弹性连接与结构支撑。</p></div></article>
+          <article class="product" data-reveal><span class="product-no">PRODUCT 03</span><div class="product-content"><h3>提花弹力织带</h3><p>通过织纹、色彩与图案变化，让功能材料同时参与鞋款视觉表达。</p></div></article>
+          <article class="product" data-reveal><span class="product-no">PRODUCT 04</span><div class="product-content"><h3>定制织带开发</h3><p>支持围绕宽度、厚度、颜色、纹理和弹性手感进行来样沟通与开发。</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section custom" id="custom">
+      <div class="container custom-grid">
+        <div class="custom-head" data-reveal><p class="eyebrow">定制流程</p><h2 class="display">从一段样品，到稳定批量。</h2><p class="section-lead">围绕实际鞋款确认需求，让开发过程清晰、可对照、可复现。</p></div>
+        <div class="custom-steps" data-reveal><article class="custom-step"><div><h3>确认应用</h3><p>了解鞋型、使用位置、受力方式及目标手感。</p></div></article><article class="custom-step"><div><h3>核对规格</h3><p>确认宽度、厚度、颜色、织纹与弹性需求。</p></div></article><article class="custom-step"><div><h3>样品开发</h3><p>按确认方向制作样品，供结构与外观测试。</p></div></article><article class="custom-step"><div><h3>确认量产</h3><p>样品确认后锁定标准，进入批量生产与交付。</p></div></article></div>
+      </div>
+    </section>
+
+    <section class="section quality" id="quality">
+      <div class="container quality-grid">
+        <div data-reveal><p class="eyebrow">品质关注</p><h2 class="display">看得见的织纹，看不见的稳定性。</h2><p class="section-lead">鞋材需要经受反复拉伸、缝制加工和日常穿着。我们建议在项目确认中重点核对以下表现。</p><div class="quality-list"><div class="quality-item"><strong>拉伸与回弹</strong><span>匹配穿脱与包裹需求</span></div><div class="quality-item"><strong>尺寸稳定</strong><span>关注宽度与厚度一致性</span></div><div class="quality-item"><strong>颜色表现</strong><span>配合鞋面材料与设计色</span></div><div class="quality-item"><strong>织面外观</strong><span>纹理清晰、表面整洁</span></div></div></div>
+        <aside class="quality-visual" data-reveal aria-label="不同颜色的弹力织带示意"><div class="sample-band"></div><div class="sample-band orange"></div><div class="sample-band light"></div><p class="quality-note">颜色与纹理示意 · 实际产品以确认样品为准</p></aside>
+      </div>
+    </section>
+
+    <section class="section cta"><div class="container cta-grid" data-reveal><div><p class="eyebrow">开始打样</p><h2 class="display">把鞋款需求，变成合适的织带方案。</h2></div><div class="cta-copy"><p>准备好鞋款图片、使用位置、参考样品或规格信息，我们可以更快开始沟通。</p><a class="button" href="#contact">查看联系方式</a></div></div></section>
+  </main>
+
+  <footer class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-brand"><div class="brand"><span class="brand-mark" aria-hidden="true"></span><span class="brand-text"><strong>温州市嘉伦织带有限公司</strong><small>鞋用弹力织带</small></span></div><p>专注鞋用松紧带与弹力织带，为鞋类产品开发提供材料支持。</p></div>
+        <div class="contact-info"><div class="contact-block"><strong>业务咨询</strong><span class="phone-list"><a href="tel:+8613587568655">135 8756 8655</a><a href="tel:+8615990776112">159 9077 6112</a></span></div><div class="contact-block"><strong>公司地址</strong><span>浙江省温州市瑞安市塘下镇中北吉祥路1号</span></div><div class="contact-block"><strong>询价建议</strong><span>请附宽度、颜色、数量与样品图</span></div><div class="contact-block"><strong>服务方向</strong><span>打样开发 · 批量供应</span></div></div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="year"></span> 温州市嘉伦织带有限公司</span><span>网站信息以企业最终确认内容为准</span></div>
+    </div>
+  </footer>
+
+  <script>
+    const translations=new Map([
+      ['嘉伦织带','JIALUN WEBBING'],
+      ['鞋用弹力织带','ELASTIC FOR FOOTWEAR'],
+      ['关于嘉伦','About'],['产品系列','Product Range'],['定制流程','Customization'],['品质关注','Quality'],['获取样品','Request Samples'],
+      ['让每一步，','Elasticity engineered'],['弹性更精准。','for every step.'],
+      ['温州市嘉伦织带有限公司，专注鞋用松紧带与弹力织带，为不同鞋型、结构与设计需求提供多规格、配色和来样开发支持。','Wenzhou Jialun Webbing Co., Ltd. specializes in elastic webbing for footwear, supporting diverse shoe constructions with custom widths, colors and sample-based development.'],
+      ['查看产品系列','View Products'],['咨询打样','Request a Sample'],['鞋用松紧带','Footwear Elastic'],['多规格与配色','Widths & Colors'],['来样开发','Sample Development'],['批量供应','Volume Supply'],
+      ['为鞋面结构提供恰到好处的弹性与支撑','Balanced stretch and support for footwear structures'],
+      ['懂织带，也懂它在鞋上的每一次受力。','Webbing engineered for the way footwear moves.'],
+      ['从穿着舒适度、包裹感到鞋型稳定，松紧带虽是鞋上的小部件，却直接影响成品体验。嘉伦围绕鞋材应用，关注织纹、弹性、回弹、手感和外观一致性，让材料更好地配合鞋款设计。','From comfort and fit to structural stability, elastic webbing plays a small but critical role in footwear. Jialun focuses on weave, stretch, recovery, hand feel and visual consistency so each material works with the intended shoe design.'],
+      ['应用导向','Application Focus'],['围绕鞋口、鞋面、侧帮等结构需求匹配材料。','Materials matched to collars, uppers, side panels and other structural needs.'],
+      ['灵活开发','Flexible Development'],['可按宽度、颜色、织纹及样品方向沟通开发。','Development based on width, color, weave and reference samples.'],
+      ['细节一致','Consistent Detail'],['关注批次之间的色泽、尺寸和弹性表现。','Attention to color, dimensions and stretch performance across batches.'],
+      ['沟通直接','Direct Collaboration'],['从打样到量产，减少信息偏差与反复确认。','Clear communication from sampling through volume production.'],
+      ['为不同鞋型，匹配不同弹性。','The right stretch for every shoe construction.'],
+      ['以下为鞋用弹力织带的常见开发方向。具体材质、宽度、颜色与弹性参数可根据样品和使用场景沟通。','Common development directions for footwear elastic webbing. Materials, widths, colors and stretch can be discussed around your sample and application.'],
+      ['鞋口松紧带','Collar Elastic'],['适用于鞋口包裹与穿脱结构，兼顾贴合、回弹与长时间穿着感。','For collar fit and easy entry, balancing comfort, recovery and long-wear performance.'],
+      ['鞋面弹力带','Upper Elastic'],['用于鞋面、侧帮等受力位置，为设计提供弹性连接与结构支撑。','For uppers and side panels, providing flexible connection and structural support.'],
+      ['提花弹力织带','Jacquard Elastic'],['通过织纹、色彩与图案变化，让功能材料同时参与鞋款视觉表达。','Custom weave, color and pattern allow a functional material to support the visual design.'],
+      ['定制织带开发','Custom Webbing'],['支持围绕宽度、厚度、颜色、纹理和弹性手感进行来样沟通与开发。','Sample-led development for width, thickness, color, texture and stretch feel.'],
+      ['从一段样品，到稳定批量。','From one sample to consistent production.'],['围绕实际鞋款确认需求，让开发过程清晰、可对照、可复现。','Requirements are defined around the actual shoe so development stays clear, comparable and repeatable.'],
+      ['确认应用','Define Application'],['了解鞋型、使用位置、受力方式及目标手感。','Review shoe type, placement, load and target hand feel.'],
+      ['核对规格','Confirm Specifications'],['确认宽度、厚度、颜色、织纹与弹性需求。','Confirm width, thickness, color, weave and stretch.'],
+      ['样品开发','Develop Sample'],['按确认方向制作样品，供结构与外观测试。','Produce samples for structural and visual evaluation.'],
+      ['确认量产','Approve Production'],['样品确认后锁定标准，进入批量生产与交付。','Lock the approved standard before volume production and delivery.'],
+      ['看得见的织纹，看不见的稳定性。','Visible texture. Reliable performance.'],['鞋材需要经受反复拉伸、缝制加工和日常穿着。我们建议在项目确认中重点核对以下表现。','Footwear materials must withstand repeated stretching, stitching and daily wear. These are the key performance areas to review during development.'],
+      ['拉伸与回弹','Stretch & Recovery'],['匹配穿脱与包裹需求','Balanced for entry and fit'],['尺寸稳定','Dimensional Stability'],['关注宽度与厚度一致性','Consistent width and thickness'],['颜色表现','Color Performance'],['配合鞋面材料与设计色','Matched to upper materials'],['织面外观','Surface Finish'],['纹理清晰、表面整洁','Clean and defined weave'],
+      ['颜色与纹理示意 · 实际产品以确认样品为准','Color and texture illustration · Final product subject to approved sample'],
+      ['开始打样','Start Sampling'],['把鞋款需求，变成合适的织带方案。','Turn your shoe requirements into the right webbing solution.'],['准备好鞋款图片、使用位置、参考样品或规格信息，我们可以更快开始沟通。','Share the shoe image, placement, reference sample or specifications so development can begin faster.'],['查看联系方式','Contact Us'],
+      ['温州市嘉伦织带有限公司','Wenzhou Jialun Webbing Co., Ltd.'],['专注鞋用松紧带与弹力织带，为鞋类产品开发提供材料支持。','Elastic webbing for footwear development and production.'],
+      ['业务咨询','Business Enquiries'],['公司地址','Address'],['浙江省温州市瑞安市塘下镇中北吉祥路1号','No. 1 Zhongbei Jixiang Road, Tangxia Town, Rui’an, Wenzhou, Zhejiang, China'],['询价建议','For Quotation'],['请附宽度、颜色、数量与样品图','Include width, color, quantity and sample image'],['服务方向','Services'],['打样开发 · 批量供应','Sample Development · Volume Supply'],['网站信息以企业最终确认内容为准','Website information subject to final company confirmation']
+    ]);
+    const translatedNodes=[];
+    const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode(node){const parent=node.parentElement;if(!parent||parent.closest('script,style'))return NodeFilter.FILTER_REJECT;return translations.has(node.nodeValue.trim())?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;}});
+    let textNode;
+    while(textNode=walker.nextNode()){const raw=textNode.nodeValue;const match=raw.match(/^(\s*)(.*?)(\s*)$/s);translatedNodes.push({node:textNode,leading:match[1],zh:match[2],trailing:match[3],en:translations.get(match[2])});}
+    const languageButtons=document.querySelectorAll('[data-lang]');
+    let currentLanguage='zh';
+    function setLanguage(language){
+      currentLanguage=language==='en'?'en':'zh';
+      translatedNodes.forEach((item)=>{item.node.nodeValue=item.leading+item[currentLanguage]+item.trailing;});
+      document.documentElement.lang=currentLanguage==='en'?'en':'zh-CN';
+      document.title=currentLanguage==='en'?'Wenzhou Jialun Webbing Co., Ltd. | Elastic Webbing for Footwear':'温州市嘉伦织带有限公司｜鞋用松紧带与弹力织带';
+      document.querySelector('meta[name="description"]').content=currentLanguage==='en'?'Wenzhou Jialun Webbing Co., Ltd. develops elastic webbing for footwear with custom widths, colors and sample-based development.':'温州市嘉伦织带有限公司专注鞋用松紧带与弹力织带，为鞋类产品提供多规格、配色与来样开发服务。';
+      document.querySelector('.brand').setAttribute('aria-label',currentLanguage==='en'?'Wenzhou Jialun Webbing home':'温州市嘉伦织带有限公司首页');
+      languageButtons.forEach((button)=>{const active=button.dataset.lang===currentLanguage;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));});
+      const url=new URL(location.href);if(currentLanguage==='en')url.searchParams.set('lang','en');else url.searchParams.delete('lang');history.replaceState({},'',url);
+      localStorage.setItem('jialun-language',currentLanguage);
+    }
+    languageButtons.forEach((button)=>button.addEventListener('click',()=>setLanguage(button.dataset.lang)));
+    const menuButton=document.querySelector('.menu-button');
+    const navLinks=document.querySelector('.nav-links');
+    menuButton.addEventListener('click',()=>{const open=document.body.classList.toggle('menu-open');menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',currentLanguage==='en'?(open?'Close navigation':'Open navigation'):(open?'关闭导航':'打开导航'));});
+    navLinks.addEventListener('click',(event)=>{if(event.target.closest('a')){document.body.classList.remove('menu-open');menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label',currentLanguage==='en'?'Open navigation':'打开导航');}});
+    const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!reduceMotion&&'IntersectionObserver'in window){const observer=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}});},{threshold:.12});document.querySelectorAll('[data-reveal]').forEach((item)=>observer.observe(item));}else{document.querySelectorAll('[data-reveal]').forEach((item)=>item.classList.add('visible'));}
+    document.getElementById('year').textContent=new Date().getFullYear();
+    const requestedLanguage=new URLSearchParams(location.search).get('lang')||localStorage.getItem('jialun-language')||'zh';
+    setLanguage(requestedLanguage);
+  </script>
+</body>
+</html>
