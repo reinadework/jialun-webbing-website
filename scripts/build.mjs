@@ -30,9 +30,17 @@ await writeFile(outputFile, html, 'utf8');
 
 const publicDir = resolve(projectRoot, 'public');
 try {
-  await cp(publicDir, outputDir, { recursive: true });
+  await cp(publicDir, resolve(outputDir, 'public'), { recursive: true });
 } catch (error) {
   if (error.code !== 'ENOENT') throw error;
+}
+
+for (const directory of ['en', 'products']) {
+  await cp(resolve(projectRoot, directory), resolve(outputDir, directory), { recursive: true });
+}
+
+for (const file of ['robots.txt', 'sitemap.xml', 'llms.txt']) {
+  await cp(resolve(projectRoot, file), resolve(outputDir, file));
 }
 
 console.log(`构建完成：${outputFile}`);
