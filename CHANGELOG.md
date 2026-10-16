@@ -4,6 +4,7 @@
 
 - 增加 HTTPS、主域名和 `index.html` 的 301 规范化重定向。
 - 将 `.htaccess` 纳入正式构建产物。
+- 增加 Bing Webmaster Tools 的站点所有权验证文件。
 - 明确 `reinadework/jialun-webbing-website` 为 Hostinger 正式发布仓库。
 - 保留中英双语 GEO/SEO 页面、FAQ、结构化数据、站点地图和 AI 抓取说明。
 

@@ -39,7 +39,7 @@ for (const directory of ['en', 'products']) {
   await cp(resolve(projectRoot, directory), resolve(outputDir, directory), { recursive: true });
 }
 
-for (const file of ['.htaccess', 'robots.txt', 'sitemap.xml', 'llms.txt']) {
+for (const file of ['.htaccess', 'BingSiteAuth.xml', 'robots.txt', 'sitemap.xml', 'llms.txt']) {
   await cp(resolve(projectRoot, file), resolve(outputDir, file));
 }
 
