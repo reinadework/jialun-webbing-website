@@ -1,0 +1,14 @@
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # One-hop canonical redirect for explicit index.html URLs.
+  RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html(?:[\s?]) [NC]
+  RewriteRule ^(.*/)?index\.html$ https://jialun.net/$1 [R=301,L,NE]
+
+  # Keep a single public origin: HTTPS and the apex domain.
+  RewriteCond %{HTTPS} !=on [OR]
+  RewriteCond %{HTTP_HOST} !^jialun\.net$ [NC]
+  RewriteRule ^ https://jialun.net%{REQUEST_URI} [R=301,L,NE]
+</IfModule>

@@ -1,20 +1,25 @@
 # 温州市嘉伦织带有限公司官网
 
-这是一个面向鞋材采购与鞋企客户的中英文双语企业官网，核心展示鞋用松紧带、弹力织带、定制流程与品质关注。网站以 HTML 为主体、使用 Node.js 编译，适合通过 GitHub 持续维护。
+这是一个面向鞋材采购与鞋企客户的中英文双语企业官网，核心展示鞋用松紧带、弹力织带、定制流程与品质关注。网站以静态 HTML 为主体，通过 GitHub 持续维护，并由 Hostinger 自动部署到 [jialun.net](https://jialun.net)。
 
 ## 修改网站
 
-主要内容都在根目录的 `index.html` 中，可以直接修改：
+主要内容分别位于以下页面，可以直接修改：
 
-- 公司介绍与产品文案
-- 产品系列和定制流程
-- 电话、微信和详细地址
-- 品质说明与询价提示
-- 中英文文案（位于页面底部的 `translations` 翻译表）
+- 中文首页：`index.html`
+- 英文首页：`en/index.html`
+- 中文产品页：`products/index.html`
+- 英文产品页：`en/products/index.html`
 
-网站图片在 `public/assets`。当前两张主视觉为原创生成图，后续可以替换为企业真实产品和工厂照片，文件名保持不变即可自动更新。
+网站图片和后续视频统一放在 `public/assets`，内容索引位于 `public/content/media.json`。具体替换方法请查看 `CONTENT_UPDATE_GUIDE.md`。
 
-修改后直接提交到 GitHub 的 `main` 分支即可。仓库内的 GitHub Pages 工作流会自动编译并发布 `dist` 目录。
+## 正式发布
+
+正式仓库为 `reinadework/jialun-webbing-website`。Hostinger 已连接仓库的 `main` 分支，提交并推送后会自动部署到 `public_html`。
+
+`.htaccess` 负责把 HTTP、`www.jialun.net` 和显式的 `index.html` 地址统一 301 重定向到 `https://jialun.net` 下的规范地址。请不要从仓库根目录删除该文件。
+
+GitHub Pages 工作流会同时编译并发布 `dist`，作为构建检查和备用预览；正式域名仍以 Hostinger 为准。
 
 ## 本地预览
 
@@ -33,4 +38,4 @@ npm run preview
 
 ## 发布前检查
 
-联系电话与企业地址已按企业提供的信息更新。正式对外推广前，请继续确认完整产品规格与产品分类文案。
+运行 `npm run build`，再确认 `git status` 只包含本次需要发布的改动。网站版本记录见 `CHANGELOG.md`。
