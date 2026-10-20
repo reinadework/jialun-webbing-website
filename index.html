@@ -296,6 +296,11 @@
     .cert-actions { display:flex; gap:20px; flex-wrap:wrap; margin-top:24px; }
     .cert-actions a { font-weight:700; text-decoration:underline; text-underline-offset:4px; }
     @media(max-width:680px) { .cert-grid { grid-template-columns:1fr; } .cert-preview img { height:300px; } .cert-copy { padding:22px; } }
+      .social-links { display:flex; align-items:center; flex-wrap:wrap; gap:12px; padding-top:28px; }
+    .social-links strong { margin-right:8px; color:#fff; font-size:.9rem; }
+    .social-links a { display:inline-flex; align-items:center; min-height:44px; padding:9px 16px; border:1px solid rgba(255,255,255,.32); border-radius:4px; color:#fff; font-size:.9rem; text-decoration:none; }
+    .social-links a:hover { background:rgba(255,255,255,.12); }
+    .social-links a:focus-visible { outline:2px solid #ff6b35; outline-offset:4px; }
   </style>
 </head>
 <body>
@@ -421,7 +426,7 @@
       </div>
       <div class="footer-bottom"><span>© <span id="year"></span> 温州市嘉伦织带有限公司</span><span>网站信息以企业最终确认内容为准</span></div>
     </div>
-  </footer>
+  <div class="container social-links" aria-label="社交媒体"><strong>关注我们</strong><a href="https://www.instagram.com/reinadework/" target="_blank" rel="noopener noreferrer" aria-label="Instagram — 在新标签页打开">Instagram ↗</a><a href="https://www.facebook.com/profile.php?id=61565020619043" target="_blank" rel="noopener noreferrer" aria-label="Facebook — 在新标签页打开">Facebook ↗</a><a href="https://www.tiktok.com/@xinderella63?lang=zh-Hans" target="_blank" rel="noopener noreferrer" aria-label="TikTok — 在新标签页打开">TikTok ↗</a></div></footer>
 
   <script>
     const translations=new Map([
