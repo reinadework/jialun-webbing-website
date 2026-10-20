@@ -34,7 +34,12 @@
 - Silver-thread elastic / 银丝
 - Twill elastic webbing / 斜纹松紧带
 
-## Contact
+## Certifications and test reports
+
+- OEKO-TEX STANDARD 100 certificate 2608274, issued by CENTEXBEL, valid until 31 August 2027. Product Class I, Annex 6; applies to the polyester elastic bands described in the certificate: https://jialun.net/public/assets/certifications/oeko-tex-standard-100-2608274.pdf
+- REACH SVHC test report XNO260709601FX1-1, dated 17 July 2026. Screening of 253 Candidate List SVHCs in submitted footwear elastic webbing samples; conclusion PASS, concentrations below 0.1% by weight. Results apply only to submitted samples: https://jialun.net/public/assets/certifications/reach-svhc-test-report-XNO260709601FX1-1.pdf
+
+## Contact details
 
 - Email: 15990776112@163.com
 - WhatsApp: +86 159 9077 6112

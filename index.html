@@ -181,13 +181,16 @@
     .application-content p { max-width: 520px; margin: 0; color: rgba(255,255,255,.68); }
 
     .media-library { background: var(--white); }
-    .media-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
+    .media-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
     .media-card { overflow: hidden; border: 1px solid var(--line); background: var(--mist); }
     .media-frame { aspect-ratio: 16/10; display: grid; place-items: center; overflow: hidden; background: var(--navy); }
     .media-frame img, .media-frame video { width: 100%; height: 100%; object-fit: cover; }
     .media-copy { padding: 24px; }
     .media-copy h3 { margin: 0; font-size: 1.35rem; line-height: 1.25; }
     .media-copy p { margin: 8px 0 0; color: var(--muted); font-size: .92rem; }
+    .media-card.is-video { max-width: 920px; margin: 0 auto; display: grid; grid-template-columns: minmax(280px,390px) 1fr; align-items: center; }
+    .media-card.is-video .media-frame { aspect-ratio: 9/16; }
+    .media-card.is-video .media-copy { padding: clamp(30px,6vw,64px); }
 
     .custom { color: var(--white); background: var(--navy); }
     .custom .eyebrow { color: var(--orange); }
@@ -254,6 +257,7 @@
       .intro-grid, .custom-grid, .quality-grid, .faq-grid, .cta-grid, .contact-grid { grid-template-columns: 1fr; gap: 54px; }
       .application-grid { grid-template-columns: 1fr; }
       .media-grid { grid-template-columns: 1fr; }
+      .media-card.is-video { grid-template-columns: 1fr; max-width: 520px; }
       .intro-visual, .intro-visual img { min-height: 440px; }
       .custom-head { position: relative; top: auto; }
       .product-grid { grid-template-columns: repeat(2,1fr); }
@@ -279,6 +283,19 @@
       *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
       [data-reveal] { opacity: 1; transform: none; }
     }
+
+    .certifications { background:#eef2f3; }
+    .cert-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+    .cert-card { background:#fff; border:1px solid #dce2e5; overflow:hidden; }
+    .cert-preview { display:block; padding:24px; background:#e5ebed; }
+    .cert-preview img { display:block; width:100%; height:340px; object-fit:contain; }
+    .cert-copy { padding:28px; }
+    .cert-copy h3 { margin:0 0 12px; font-size:1.35rem; line-height:1.35; }
+    .cert-copy p { color:#566570; font-size:.94rem; }
+    .cert-number { font-weight:700; overflow-wrap:anywhere; }
+    .cert-actions { display:flex; gap:20px; flex-wrap:wrap; margin-top:24px; }
+    .cert-actions a { font-weight:700; text-decoration:underline; text-underline-offset:4px; }
+    @media(max-width:680px) { .cert-grid { grid-template-columns:1fr; } .cert-preview img { height:300px; } .cert-copy { padding:22px; } }
   </style>
 </head>
 <body>
@@ -286,7 +303,7 @@
     <nav class="nav container" aria-label="主导航">
       <a class="brand" href="#top" aria-label="温州市嘉伦织带有限公司首页"><span class="brand-mark" aria-hidden="true"></span><span class="brand-text"><strong>嘉伦织带</strong><small>弹性织带制造</small></span></a>
       <button class="menu-button" type="button" aria-label="打开导航" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 8h16M4 16h16" stroke="currentColor" stroke-width="1.6"/></svg></button>
-      <div class="nav-links"><a href="#about">关于嘉伦</a><a href="#products">产品系列</a><a href="#applications">应用领域</a><a href="#media" data-media-nav hidden>图片与视频</a><a href="#custom">定制流程</a><a href="#faq">常见问题</a><a class="nav-cta" href="https://wa.me/8615990776112" target="_blank" rel="noopener">WhatsApp询价</a><div class="lang-switch" aria-label="语言选择"><button type="button" data-lang="zh" class="active" aria-pressed="true">中文</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div></div>
+      <div class="nav-links"><a href="#about">关于嘉伦</a><a href="#products">产品系列</a><a href="#applications">应用领域</a><a href="#media" data-media-nav hidden>工厂生产</a><a href="#custom">定制流程</a><a href="#faq">常见问题</a><a class="nav-cta" href="https://wa.me/8615990776112" target="_blank" rel="noopener">WhatsApp询价</a><div class="lang-switch" aria-label="语言选择"><button type="button" data-lang="zh" class="active" aria-pressed="true">中文</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div></div>
     </nav>
   </header>
 
@@ -345,11 +362,26 @@
 
     <section class="section media-library" id="media" hidden>
       <div class="container">
-        <div class="section-head" data-reveal><div><p class="eyebrow">图片与视频</p><h2 class="display">持续更新的产品与生产记录。</h2></div><p class="section-lead">这里用于展示后续新增的产品图片、应用案例和生产视频。</p></div>
+        <div class="section-head" data-reveal><div><p class="eyebrow">工厂生产</p><h2 class="display">走近织带生产现场。</h2></div><p class="section-lead">观看织带设备的实际运行画面，了解弹性织带从织造到连续输出的生产过程。</p></div>
         <div class="media-grid" data-media-grid></div>
       </div>
     </section>
 
+<section class="section certifications" id="certifications">
+      <div class="container">
+        <div class="section-head"><div><p class="eyebrow">资质与检测报告</p><h2 class="display">可查阅的产品合规资料。</h2></div><p class="section-lead">以下提供证书与检测报告原件。具体订单的适用性，请结合产品规格及文件所列范围确认。</p></div>
+        <div class="cert-grid">
+          <article class="cert-card">
+            <a class="cert-preview" href="/public/assets/certifications/oeko-tex-standard-100-2608274.pdf" target="_blank" rel="noopener" aria-label="查看 OEKO-TEX 证书 PDF"><img src="/public/assets/certifications/oeko-tex-standard-100-2608274.jpg" alt="温州市嘉伦织带有限公司 OEKO-TEX STANDARD 100 证书" loading="lazy" width="992" height="1404"></a>
+            <div class="cert-copy"><h3>OEKO-TEX® STANDARD 100</h3><p class="cert-number">证书编号: 2608274</p><p>适用于证书所列涤纶弹性带范围，产品等级 I（婴幼儿用品），附录 6。由 CENTEXBEL 签发，有效期至 2027 年 8 月 31 日。</p><div class="cert-actions"><a href="/public/assets/certifications/oeko-tex-standard-100-2608274.pdf" target="_blank" rel="noopener">查看证书 ↗</a><a href="/public/assets/certifications/oeko-tex-standard-100-2608274.pdf" download>下载 PDF</a></div></div>
+          </article>
+          <article class="cert-card">
+            <a class="cert-preview" href="/public/assets/certifications/reach-svhc-test-report-XNO260709601FX1-1.pdf" target="_blank" rel="noopener" aria-label="查看 REACH 检测报告 PDF"><img src="/public/assets/certifications/reach-svhc-test-report-XNO260709601FX1-1.jpg" alt="嘉伦鞋材松紧带 REACH SVHC 检测报告首页" loading="lazy" width="992" height="1404"></a>
+            <div class="cert-copy"><h3>REACH SVHC 检测报告</h3><p class="cert-number">报告编号: XNO260709601FX1-1</p><p>报告日期为 2026 年 7 月 17 日，对送检鞋材松紧带样品进行 253 项候选清单 SVHC 筛查，结论为 PASS，所测浓度低于 0.1%（质量分数）。检测结果仅适用于送检样品。</p><div class="cert-actions"><a href="/public/assets/certifications/reach-svhc-test-report-XNO260709601FX1-1.pdf" target="_blank" rel="noopener">查看检测报告 ↗</a><a href="/public/assets/certifications/reach-svhc-test-report-XNO260709601FX1-1.pdf" download>下载 PDF</a></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
     <section class="section custom" id="custom">
       <div class="container custom-grid">
         <div class="custom-head" data-reveal><p class="eyebrow">定制流程</p><h2 class="display">从一段样品，到稳定批量。</h2><p class="section-lead">围绕实际成品确认需求，让开发过程清晰、可对照、可复现。</p></div>
@@ -394,7 +426,8 @@
   <script>
     const translations=new Map([
       ['嘉伦织带','JIALUN WEBBING'],['弹性织带制造','ELASTIC WEBBING'],
-      ['关于嘉伦','About'],['产品系列','Products'],['应用领域','Applications'],['图片与视频','Media'],['定制流程','Customization'],['品质关注','Quality'],['获取报价','Get a Quote'],
+      ['关于嘉伦','About'],['产品系列','Products'],['应用领域','Applications'],['工厂生产','Factory Production'],['定制流程','Customization'],['品质关注','Quality'],['获取报价','Get a Quote'],
+      ['走近织带生产现场。','See elastic webbing production in action.'],['观看织带设备的实际运行画面，了解弹性织带从织造到连续输出的生产过程。','Watch real machinery in operation and see how elastic webbing is woven and continuously fed through the production line.'],
       ['弹得有力，','Built to stretch.'],['挺得稳定。','Made to hold.'],
       ['温州市嘉伦织带有限公司，生产涤纶与乳胶松紧带，面向鞋材与宠物用品应用，支持宽度、颜色与来样定制。','Wenzhou Jialun Webbing Co., Ltd. produces polyester and latex elastic webbing for footwear and pet products, with custom widths, colors and sample-based development.'],
       ['查看产品系列','View Products'],['咨询打样','Discuss a Sample'],['涤纶 + 乳胶','Polyester + Latex'],['0.8–50cm 宽度','0.8–50cm Widths'],['鞋材与宠物用品','Footwear & Pet Products'],['支持来样定制','Sample-based Customization'],
@@ -467,7 +500,7 @@
         const section=document.getElementById('media');
         const grid=section.querySelector('[data-media-grid]');
         items.forEach((item)=>{
-          const article=document.createElement('article'); article.className='media-card';
+          const article=document.createElement('article'); article.className='media-card'+(item.type==='video'?' is-video':'');
           const frame=document.createElement('div'); frame.className='media-frame';
           if(item.type==='video'){
             const media=document.createElement('video'); media.src=item.src; media.controls=true; media.preload='metadata'; media.playsInline=true;

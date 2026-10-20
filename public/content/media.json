@@ -1,3 +1,13 @@
 {
-  "items": []
+  "items": [
+    {
+      "type": "video",
+      "src": "/public/assets/video/factory-production.mp4",
+      "poster": "/public/assets/video/factory-production-poster.jpg",
+      "titleZh": "织带机生产实拍",
+      "titleEn": "Elastic Webbing Production",
+      "descriptionZh": "两组织带设备的实际生产画面，展示弹性织带从织造到连续输出的过程。",
+      "descriptionEn": "A real production view of two webbing machines, showing elastic webbing being woven and continuously fed through the line."
+    }
+  ]
 }
